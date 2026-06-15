@@ -1,0 +1,87 @@
+{
+  "C++ Main (fast IO)": {
+    "prefix": "cppmain",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "    ios::sync_with_stdio(false);",
+      "    cin.tie(nullptr);",
+      "    $0",
+      "    return 0;",
+      "}"
+    ],
+    "description": "C++ main with fast IO setup"
+  },
+
+  "For Loop (i)": {
+    "prefix": "fori",
+    "body": [
+      "for (int i = 0; i < ${1:N}; ++i) {",
+      "    $0",
+      "}"
+    ],
+    "description": "Classic for-loop with index i"
+  },
+
+  "Range-based For": {
+    "prefix": "forr",
+    "body": [
+      "for (auto &${1:elem} : ${2:container}) {",
+      "    $0",
+      "}"
+    ],
+    "description": "Range-based for loop"
+  },
+
+  "If-Else": {
+    "prefix": "ife",
+    "body": [
+      "if (${1:condition}) {",
+      "    $0",
+      "} else {",
+      "    ",
+      "}"
+    ],
+    "description": "If-else block"
+  },
+
+  "Read Int": {
+    "prefix": "cin",
+    "body": [
+      "int ${1:var};",
+      "cin >> ${1:var};",
+      "$0"
+    ],
+    "description": "Read integer from stdin"
+  },
+
+  "Print Line": {
+    "prefix": "cout",
+    "body": [
+      "cout << ${1:val} << '\\n';",
+      "$0"
+    ],
+    "description": "Print value followed by newline"
+  },
+
+  "Swap Two Vars": {
+    "prefix": "swapv",
+    "body": [
+      "std::swap(${1:a}, ${2:b});",
+      "$0"
+    ],
+    "description": "Swap two variables using std::swap"
+  },
+
+  "Debug Print": {
+    "prefix": "dbg",
+    "body": [
+      "cerr << \"[DEBUG] \\" << ${1:var} << '\\n';",
+      "$0"
+    ],
+    "description": "Debug print to stderr"
+  }
+
+}

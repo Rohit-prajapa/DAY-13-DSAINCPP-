@@ -1,6 +1,33 @@
 #include<iostream>
 using namespace std;
+void deleteElement(int arr[], int &n){
+    int value;
+    cout << "Enter element to delete: ";
+    cin >> value;
 
+    int pos = -1;
+
+    for(int i = 0; i < n; i++){
+        if(arr[i] == value){
+            pos = i;
+            break;
+        }
+    }
+
+    if(pos == -1){
+        cout << "Element not found";
+        return;
+    }
+
+    for(int i = pos; i < n - 1; i++){
+        arr[i] = arr[i + 1];
+    }
+    n--;
+    cout << "Array after deletion: ";
+    for(int i = 0; i < n; i++){
+        cout << arr[i] << " ";
+    }
+}
 void square(int arr[], int n){
     for(int i=0; i<n; i++){
         cout<<(arr[i]*arr[i])<<endl;
@@ -95,6 +122,7 @@ cout<<"\n5.Even Index";
 cout<<"\n6.Sum";
 cout<<"\n7.Index Position";
 cout<<"\n8.Square";
+cout<<"\n9.Delete Element";
 
 cout<<"\nEnter your choice: ";
 cin>>choice;
@@ -137,6 +165,10 @@ switch(choice)
     case 8:
         square(arr,n);
         break;
+
+    case 9:
+    deleteElement(arr,n);
+    break;
 
     default:
         cout<<"Invalid Choice";

@@ -1,0 +1,1 @@
+ // noOfWord(str);
